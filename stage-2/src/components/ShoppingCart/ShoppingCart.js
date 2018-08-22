@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './ShoppingCart.css';
 
+
 class ShoppingCart extends Component {
     constructor(props) {
         super(props);
@@ -18,6 +19,7 @@ class ShoppingCart extends Component {
 
     render() {
         let shoppingCartDisplay = this.state.shoppingCart.map((element, index) => {
+            return(
             <div className="shopping-cart-product-container">
                 <img src={element.image} alt="" />
                 <div className="shopping-cart-info">
@@ -28,7 +30,7 @@ class ShoppingCart extends Component {
                     </div>
                 </div>
             </div>
-        })
+        )})
         return (
             <div className="shopping-cart-container">
                 {shoppingCartDisplay[0] ?
